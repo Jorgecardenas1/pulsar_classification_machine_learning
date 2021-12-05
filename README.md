@@ -37,9 +37,8 @@ root
 ```
 
 ### Setup and run ###
-1. Open EDGESSimulationV3.ipyb
+1. Open Pulsar_ML_V1.ipyb
 2. The notebook is set in a way that it downloads and installs all dependencies required to run.
-
 3. There is no need to set variables or parameters. 
 
 4. ***Index***:
