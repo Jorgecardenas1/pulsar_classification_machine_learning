@@ -11,13 +11,15 @@
 
 ## Quick summary: ##
 
-* EDGES is a project in the look for the 21-cm line. Since 2018 they provided information about a potential detection of such signal, but the models are being revised. In particular, the T sky model is under review.
+* The problem of classifying Pulsars has been approached from different angles, and more recently focus has been put on Machine Learning as a tool to speed the classification process up.
 
-* We have applied **Markov Chain Monte Carlo** in particular Metropolis-Hastings, to estimate the proposed model parameters.
+* Here we use a well known pulsars survey database to test different classification models and to evaluate how to improve the accuracy.
+
+* We have applied **Random Forest** and **Neural Networks** together with **Data Overshampling Technique** in order to improve accuracy as the original database is highly umbalanced.
 
 
     - Version: 1.0
-   -   [Share this repo](https://bitbucket.org/jcardenas0/edges_mcmc_metropolis/)
+   -   [Share this repo](https://github.com/Jorgecardenas1/pulsar_classification_machine_learning)
 
 ## Content ##
 ```
@@ -25,13 +27,11 @@ root
 │   README.md
 │       
 └───MCMC_SkyModel
-   │   figure1_plotdata.csv
-   │   EDGESSimulationV3.ipyb
-   └───mc_sim
-       │   imports.py
-       │   MCMC.py
-       │   models.py
-       │   montecarlo.py
+   │   pulsar_data_test.csv
+   |   pulsar_data_train.csv
+   │   Pulsar_ML_V1.ipyb
+   └───images
+       │   Multiples images files
 ```
 
 ### Setup and run ###
