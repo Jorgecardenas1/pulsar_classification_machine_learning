@@ -40,36 +40,20 @@ root
 
 3. There is no need to set variables or parameters. 
 
-4. ***MCMC Module***:
-This modules includes all function for sampling, evaluating loglikelihood and the main function for the metropolis hastings algorithm.
+4. ***Index***:
+There are different processes worked out through out the notebook. Here is a brief description of everyone of them:
 
-The main method is Metropolis.MH()
 
-```python
-result,dataframe = Metropolis.MH(sky_model,
-                                 parameters,
-                                 t_sky_data,
-                                 sigma_parameter,
-                                 evaluateLogLikelihood,
-                                 initial_point,
-                                 num_walkers,
-                                 num_samples,
-                                 burn_sample)
-```
-
-| Method                	| Description                                                            	|
-|-----------------------	|------------------------------------------------------------------------	|
-| sky_model             	| Function to be evaluated during the MCMC run                           	|
-| parameters            	| Dictionary with parameters being tested, with ther min and max values. 	|
-| t_sky_data            	| Data loaded from data frame containing truth values.                   	|
-| sigma_parameter       	| Sigma value to be used for the loglikelihood evaluation                	|
-| evaluateLogLikelihood 	| Function to evaluate loglikelihood every iteration                     	|
-| initial_point         	| initial value for the THETA vector. It is a random sample.             	|
-| num_walkers           	| Walkers to be used during the run.                                     	|
-| num_samples           	| Samples to be used during run.                                         	|
-| burn_sample           	| The number of samples tu be burned from the markov chain.              	|
-|                       	|                                                                        	|
-____
+| Section          | Subsection                                      | Description                                                                                                                                                                           |
+|------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Exploration | Profiles                                        | A Brief description of the theory behing Pulsar Integrated Profile and the entries of the Data frame                                                                                  |
+| Data Exploration | Correlation                                     | An analysis of how the data is correlated. This initial approximation removes all NAN values in all columns to deal with them. This is improved by imputing data in further sections. |
+| Pre-processing   | Exploratory Decision Tree Classifier            | This is a preliminary classification based on the data we have so far.                                                                                                                |
+| Pre-processing   | Imputing and preparation                        | This section is focused on Normalizing, Standardizing Data, and Imputing. This technique is way better than just removing the NAN values.                                             |
+| Pre-Processing   | Exploratory Random Forest with Standardize Data | We just use the processed dataset to build a classification model, which proves to improve in accuracy.                                                                               |
+| Model            | Neural Network                                  | In this section is built a Neural Network model (2 inner layers) and one sigmoid output layer to work as a binary classification model.)                                              |
+| Model            | Processing by oversampling                      | The data set is very umbalanced, so we implement an oversampling technique to generate a more balanced dataset to be tested with a new neural network.                                |
+| Model            | Neural Network with Balanced Data               | The model is tested using the newly created dataset together with all previous techniques, yielding and improvement in the classification accuracy.                                   |
 
 ### Results ###
 
