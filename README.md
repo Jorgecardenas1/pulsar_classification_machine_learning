@@ -4,6 +4,8 @@
 <img src="https://img.shields.io/badge/v1-mcmc-green" ><img src="https://img.shields.io/badge/python-3-yellowgreen" >
 
 
+![Scheme](images/Pulsar_ML_V1.jpeg)
+
 ---
 
 
